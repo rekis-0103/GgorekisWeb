@@ -4,67 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Profile</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <style>
-        body {
-            font-family: 'Press Start 2P', cursive;
-            text-align: center;
-            background-color: #1a252f;
-            color: #ddd;
-            padding: 20px;
-        }
-        a {
-            color: #ddd;
-            text-decoration: none;
-            border: 2px solid #ddd;
-            padding: 5px 10px;
-            margin: 5px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.1s ease;
-        }
-        a:hover {
-            background-color: #f5f5f5;
-            color: #333;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        a:active {
-            transform: translateY(2px);
-        }
-        a:focus {
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
-        }
-        h1, h2 {
+        /* Reset styles */
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        h1 {
-            font-size: 2.5em;
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
         }
-        h2 {
-            font-size: 1.5em;
-        }
-        hr {
-            border: none;
-            height: 1px;
+        
+        header, footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a252f;
             color: #fff;
-            background-color: #fff;
-            width: 50%;
-            margin: 20px auto;
         }
-        header {
-            background-color: #f5f5f5;
-            color: #333;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 20px;
+        
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        footer {
-            background-color: #f5f5f5;
-            color: #333;
-            padding: 20px;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .gatau {
+        
+        .profile {
             background-image: url('https://img.freepik.com/free-vector/dark-hexagonal-background-with-gradient-color_79603-1409.jpg?size=626&ext=jpg&ga=GA1.1.1448711260.1706227200&semt=ais');
             background-size: cover;
             background-position: center;
@@ -76,39 +45,57 @@
             text-align: center;
             color: #fff;
         }
-        .gatau h1 {
+        
+        .profile h1 {
             font-size: 4em;
             margin-bottom: 0.5em;
         }
-        .gatau h2 {
+        
+        .profile h2 {
             font-size: 2em;
             margin-top: 0;
         }
-        .gatau p {
+        
+        .profile p {
             font-size: 1.2em;
             margin-bottom: 1em;
         }
-        .gatau a {
-            margin: 0.5em;
+        
+        .profile a {
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #fff;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+        
+        .profile a:hover {
+            background-color: #333;
+            border-color: #333;
+        }
+        
+        footer {
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>My website</h1>
+        <h1>My Website</h1>
     </header>
-    <main class="gatau">
+    <main class="profile">
         <h1>My Name is ggorekis</h1>
-        <h2>My Social media</h2>
-        <p>Find me on youtube: 
+        <p>Find me on YouTube: 
             <a href="https://youtube.com/@Ggorekisgaming?si=GAZ1IoPXawVMqPBz" target="_blank">YouTube</a>
         </p>
-        <p>Find me on Instagram: 
+        <p style="margin-bottom: 2em;">Find me on Instagram: 
             <a href="https://www.instagram.com/ggorekis_gaming" target="_blank">Instagram</a>
         </p>
     </main>
     <footer>
-        im still learning so this is bad af
+        I'm still learning, so this website is a work in progress.
     </footer>
 </body> 
 </html>
