@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2bee2b">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <title>My Website</title>
 </head>
 <body>
@@ -14,20 +16,50 @@
     </div>
     <div class="content">
         <div class="youtube">
-            <a href="https://www.youtube.com/@Ggorekisgaming"><i class="fab fa-youtube"></i> My youtube</a>
-            <p>I have 4000 subscribers on my youtube, my youtube is for my gaming content, dont forget to subscribe</p>
+            <a href="https://www.youtube.com/@Ggorekisgaming">
+                <i class="fab fa-youtube"></i>
+                <span>My youtube</span>
+                <p>I have 4000 subscribers on my youtube, my youtube is for my gaming content, dont forget to subscribe</p>
+            </a>
         </div>
         <div class="instagram">
-            <a href="https://www.instagram.com/ggorekis_gaming"><i class="fab fa-instagram"></i> My instagram</a>
-            <p>my instagram account is for my daily life on my social media, so follow it</p>
+            <a href="https://www.instagram.com/ggorekis_gaming">
+                <i class="fab fa-instagram"></i>
+                <span>My instagram</span>
+                <p>my instagram account is for my daily life on my social media, so follow it</p>
+            </a>
         </div>
         <div class="github">
-            <a href="https://github.com/ReCode222"><i class="fab fa-github"></i> My github</a>
-            <p>my github is for upload my projects, like school projects or my projects i made becaulse im bored</p>
+            <a href="https://github.com/ReCode222">
+                <i class="fab fa-github"></i>
+                <span>My github</span>
+                <p>my github is for upload my projects, like school projects or my projects i made becaulse im bored</p>
+            </a>
         </div>
     </div>
     <footer>
         Made by Ggorekis A.K.A Rekishii
     </footer>
+    <script>
+        const cards = document.querySelectorAll('.youtube, .instagram, .github');
+        cards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                let ripple = document.createElement('div');
+                ripple.className = 'ripple';
+                this.appendChild(ripple);
+
+                let rect = this.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
+
+                ripple.style.left = `${x}px`;
+                ripple.style.top = `${y}px`;
+
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+    </script>
 </body>
 </html>
